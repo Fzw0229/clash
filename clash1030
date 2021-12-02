@@ -5,9 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 unlissh新加坡1127, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 9d050020-b188-4834-954b-20ecd9555439, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}}
-  - {name: 🇸🇬 ssh新加坡1127, server: v2raysg-5.sshstores.vip, port: 443, type: vmess, uuid: 08b1f069-f21c-41d9-92e2-f2191e8cc422, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /sshstores, ws-headers: {Host: v2raysg-5.sshstores.vip}}
-  - {name: unlissh-12.1, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 7878424f-b47d-452e-b0a3-ab7645a371fc, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}}
+  - {name: ssh1202, server: sg.vmess3.xservs.xyz, port: 443, type: vmess, uuid: 96593adb-9bd0-4188-9e15-dd160fcc14aa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess3.xservs.xyz}}
 proxy-groups:
   - name: 🚀 全局设置
     type: select
@@ -17,17 +15,13 @@ proxy-groups:
   - name: 🚀 手动选择节点
     type: select
     proxies:
-      - 🇸🇬 unlissh新加坡1127
-      - 🇸🇬 ssh新加坡1127
-      - unlissh-12.1
+      - ssh1202
   - name: ♻️ 自动选择节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇸🇬 unlissh新加坡1127
-      - 🇸🇬 ssh新加坡1127
-      - unlissh-12.1
+      - ssh1202
   - name: 🎯 国内网站设置
     type: select
     proxies:
