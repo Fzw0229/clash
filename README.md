@@ -1,1 +1,1 @@
-# clash
+# clash格式
