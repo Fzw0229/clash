@@ -5,69 +5,69 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: opentunnel.net-fdfrrr, server: sgv-3.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdfrrr", ws-headers: {Host: sgv-3.openv2ray.com}, udp: true}
-  - {name: opentunnel新加坡1205, server: sgv-6.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-rrrrd", ws-headers: {Host: sgv-6.openv2ray.com}, udp: true}
-  - {name: sssh1205, server: sg.vmess2.xservs.xyz, port: 443, type: vmess, uuid: addbd9fc-85af-4cc2-8c6c-a447c2263893, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess2.xservs.xyz}, udp: true}
+  - {name: unlissh1209, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 0cc50abe-47a7-482b-91c3-53c413ccfacf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
+  - {name: opentunnel1209新加坡, server: 52.184.96.121, port: 34403, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-iiui", ws-headers: {Host: sgv-6.openv2ray.com}, udp: true}
+  - {name: opentunnel德国1209, server: 52.184.96.121, port: 50415, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdfd", ws-headers: {Host: dev-1.openv2ray.com}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,9 +90,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - opentunnel.net-fdfrrr
-      - opentunnel新加坡1205
-      - sssh1205
+      - unlissh1209
+      - opentunnel1209新加坡
+      - opentunnel德国1209
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
