@@ -10,6 +10,9 @@ proxies:
   - {name: unliss1225, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 3201347a-dd1c-4838-a0bf-d650a1ad5c65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
   - {name: sssh1225, server: sg.vmess1.xservs.xyz, port: 443, type: vmess, uuid: d3865daa-e29b-4146-abde-9f410506090f, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess1.xservs.xyz}, udp: true}
   - {name: opentunnel澳洲1225, server: auv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdfd", ws-headers: {Host: auv-1.openv2ray.com}, udp: true}
+  - {name: cannadal加拿大1225, server: ca.vmess1.xservs.xyz, port: 443, type: vmess, uuid: a87c3518-709d-491e-a2fe-4e95f0eae95a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: ca.vmess1.xservs.xyz}, udp: true}
+  - {name: unlissh1225美国, server: v2ray-us01.unlissh.cyou, port: 443, type: vmess, uuid: c550777a-604f-4a1c-b940-fa362c67b914, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-us01.unlissh.cyou}, udp: true}
+  - {name: polan波兰, server: pl.vmess1.xservs.xyz, port: 443, type: vmess, uuid: b4ba95be-1749-446f-8c82-57476d144b62, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: pl.vmess1.xservs.xyz}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -21,6 +24,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -32,6 +38,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -43,6 +52,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: 📲 电报信息
     type: select
     proxies:
@@ -53,6 +65,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -63,6 +78,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -73,6 +91,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -84,6 +105,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -111,6 +135,9 @@ proxy-groups:
       - unliss1225
       - sssh1225
       - opentunnel澳洲1225
+      - cannadal加拿大1225
+      - unlissh1225美国
+      - polan波兰
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
