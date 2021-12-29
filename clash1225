@@ -5,109 +5,77 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: ssh1221, server: sg.vmess2.xservs.xyz, port: 443, type: vmess, uuid: cfcfdcca-43c5-48c6-984f-ffe35b9618e2, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess2.xservs.xyz}, udp: true}
-  - {name: ssh1222, server: sg.vmess2.xservs.xyz, port: 443, type: vmess, uuid: c9186d4b-2945-4b53-82b6-d78b534fd791, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess2.xservs.xyz}, udp: true}
   - {name: unliss1225, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 3201347a-dd1c-4838-a0bf-d650a1ad5c65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
   - {name: sssh1225, server: sg.vmess1.xservs.xyz, port: 443, type: vmess, uuid: d3865daa-e29b-4146-abde-9f410506090f, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess1.xservs.xyz}, udp: true}
-  - {name: opentunnel澳洲1225, server: auv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdfd", ws-headers: {Host: auv-1.openv2ray.com}, udp: true}
-  - {name: cannadal加拿大1225, server: ca.vmess1.xservs.xyz, port: 443, type: vmess, uuid: a87c3518-709d-491e-a2fe-4e95f0eae95a, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: ca.vmess1.xservs.xyz}, udp: true}
-  - {name: unlissh1225美国, server: v2ray-us01.unlissh.cyou, port: 443, type: vmess, uuid: c550777a-604f-4a1c-b940-fa362c67b914, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-us01.unlissh.cyou}, udp: true}
-  - {name: polan波兰, server: pl.vmess1.xservs.xyz, port: 443, type: vmess, uuid: b4ba95be-1749-446f-8c82-57476d144b62, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: pl.vmess1.xservs.xyz}, udp: true}
+  - {name: ssh1229, server: sg.vmess1.xservs.xyz, port: 443, type: vmess, uuid: f8db7b60-7927-47ea-a019-cdb4094b4a30, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess1.xservs.xyz}, udp: true}
+  - {name: unlissh1229, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: d14d6438-da7a-41dd-93fc-4b9904f6522c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -130,14 +98,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ssh1221
-      - ssh1222
       - unliss1225
       - sssh1225
-      - opentunnel澳洲1225
-      - cannadal加拿大1225
-      - unlissh1225美国
-      - polan波兰
+      - ssh1229
+      - unlissh1229
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -2029,15 +1993,22 @@ rules:
  - DOMAIN-SUFFIX,hayabusa.io,🌍 国外媒体
  - DOMAIN-SUFFIX,c4assets.com,🌍 国外媒体
  - DOMAIN-SUFFIX,channel4.com,🌍 国外媒体
- - DOMAIN, atv-ps.amazon.com,🌍 国外媒体
- - DOMAIN, fls-na.amazon.com,🌍 国外媒体
- - DOMAIN-SUFFIX, media-amazon.com,🌍 国外媒体
+ - DOMAIN-KEYWORD,avoddashs,🌍 国外媒体
+ - DOMAIN,atv-ps.amazon.com,🌍 国外媒体
+ - DOMAIN,avodmp4s3ww-a.akamaihd.net,🌍 国外媒体
+ - DOMAIN,d1v5ir2lpwr8os.cloudfront.net,🌍 国外媒体
+ - DOMAIN,d1xfray82862hr.cloudfront.net,🌍 国外媒体
+ - DOMAIN,d22qjgkvxw22r6.cloudfront.net,🌍 国外媒体
+ - DOMAIN,d25xi40x97liuc.cloudfront.net,🌍 国外媒体
+ - DOMAIN,d27xxe7juh1us6.cloudfront.net,🌍 国外媒体
+ - DOMAIN,d3196yreox78o9.cloudfront.net,🌍 国外媒体
+ - DOMAIN,dmqdd6hw24ucf.cloudfront.net,🌍 国外媒体
+ - DOMAIN,ktpx.amazon.com,🌍 国外媒体
  - DOMAIN-SUFFIX,aiv-cdn.net,🌍 国外媒体
- - DOMAIN-SUFFIX,amazonaws.co.uk,🌍 国外媒体
- - DOMAIN-SUFFIX,amazonaws.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,aiv-delivery.net,🌍 国外媒体
  - DOMAIN-SUFFIX,amazonvideo.com,🌍 国外媒体
- - DOMAIN-SUFFIX,llnwd.net,🌍 国外媒体
- - DOMAIN-SUFFIX,primevideo.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,media-amazon.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,pv-cdn.net,🌍 国外媒体
  - DOMAIN,gspe1-ssl.ls.apple.com,🌍 国外媒体
  - DOMAIN,np-edge.itunes.apple.com,🌍 国外媒体
  - DOMAIN,play-edge.itunes.apple.com,🌍 国外媒体
@@ -2060,45 +2031,17 @@ rules:
  - DOMAIN,gamer2-cds.cdn.hinet.net,🌍 国外媒体
  - DOMAIN-SUFFIX,bahamut.com.tw,🌍 国外媒体
  - DOMAIN-SUFFIX,gamer.com.tw,🌍 国外媒体
- - DOMAIN-SUFFIX,hinet.net,🌍 国外媒体
- - DOMAIN-KEYWORD,livedazn,🌍 国外媒体
- - DOMAIN-KEYWORD,vod2dazn,🌍 国外媒体
  - DOMAIN-KEYWORD,voddazn,🌍 国外媒体
  - DOMAIN,d151l6v8er5bdm.cloudfront.net,🌍 国外媒体
- - DOMAIN,edge.api.brightcove.com,🌍 国外媒体
- - DOMAIN,players.brightcove.net,🌍 国外媒体
- - DOMAIN-SUFFIX,amplify.outbrain.com,🌍 国外媒体
- - DOMAIN-SUFFIX,bluekai.com,🌍 国外媒体
- - DOMAIN-SUFFIX,control.kochava.com,🌍 国外媒体
- - DOMAIN-SUFFIX,cws.conviva.com,🌍 国外媒体
  - DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,d1sgwhnao7452x.cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,dazn-api.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dazn.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dazndn.com,🌍 国外媒体
- - DOMAIN-SUFFIX,dc1-voddash-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dc1live21715dazn.akamaized.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dc2-live2dash-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dc2-live2hls-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dc2-vodhls-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dca-livedash-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dca-voddash-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dca-vodhls-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dcb-livedash-perform.secure.footprint.net,🌍 国外媒体
- - DOMAIN-SUFFIX,dcb-voddash-perform.secure.footprint.net,🌍 国外媒体
  - DOMAIN-SUFFIX,dcblivedazn.akamaized.net,🌍 国外媒体
  - DOMAIN-SUFFIX,indazn.com,🌍 国外媒体
  - DOMAIN-SUFFIX,indaznlab.com,🌍 国外媒体
- - DOMAIN-SUFFIX,intercom.io,🌍 国外媒体
- - DOMAIN-SUFFIX,perfops.doracdn.com,🌍 国外媒体
- - DOMAIN-SUFFIX,s.llnwi.net,🌍 国外媒体
- - DOMAIN-SUFFIX,s.yimg.jp,🌍 国外媒体
- - DOMAIN-SUFFIX,secure.footprint.net,🌍 国外媒体
  - DOMAIN-SUFFIX,sentry.io,🌍 国外媒体
- - DOMAIN-SUFFIX,urbanairship.com,🌍 国外媒体
- - DOMAIN-SUFFIX,vjs.zencdn.net,🌍 国外媒体
- - DOMAIN-SUFFIX,widevine.entitlement.us.theplatform.com,🌍 国外媒体
- - DOMAIN-SUFFIX,yahoo.co.jp,🌍 国外媒体
  - DOMAIN-SUFFIX,deezer.com,🌍 国外媒体
  - DOMAIN-SUFFIX,dzcdn.net,🌍 国外媒体
  - DOMAIN,cdn.registerdisney.go.com,🌍 国外媒体
@@ -2129,25 +2072,13 @@ rules:
  - DOMAIN-SUFFIX,fox.com,🌍 国外媒体
  - DOMAIN-SUFFIX,foxdcg.com,🌍 国外媒体
  - DOMAIN-SUFFIX,uplynk.com,🌍 国外媒体
- - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🌍 国外媒体
- - DOMAIN,bcbolthboa-a.akamaihd.net,🌍 国外媒体
- - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🌍 国外媒体
- - DOMAIN,dai3fd1oh325y.cloudfront.net,🌍 国外媒体
- - DOMAIN,hboasia1-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia2-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia3-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia4-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,hboasia5-i.akamaihd.net,🌍 国外媒体
- - DOMAIN,players.brightcove.net,🌍 国外媒体
- - DOMAIN,s3-ap-southeast-1.amazonaws.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbo.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbogo.com,🌍 国外媒体
- - DOMAIN-SUFFIX,hbogoasia.com,🌍 国外媒体
- - DOMAIN-SUFFIX,hbogoasia.hk,🌍 国外媒体
  - DOMAIN-SUFFIX,hbomax.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbomaxcdn.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbonow.com,🌍 国外媒体
  - DOMAIN-KEYWORD,.hbogoasia.,🌍 国外媒体
+ - DOMAIN-KEYWORD,hbogoasia,🌍 国外媒体
  - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🌍 国外媒体
  - DOMAIN,bcbolthboa-a.akamaihd.net,🌍 国外媒体
  - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🌍 国外媒体
@@ -2163,6 +2094,7 @@ rules:
  - DOMAIN,hbounify-prod.evergent.com,🌍 国外媒体
  - DOMAIN,players.brightcove.net,🌍 国外媒体
  - DOMAIN,s3-ap-southeast-1.amazonaws.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,hboasia.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbogoasia.com,🌍 国外媒体
  - DOMAIN-SUFFIX,hbogoasia.hk,🌍 国外媒体
  - DOMAIN-SUFFIX,5itv.tv,🌍 国外媒体
@@ -2210,6 +2142,8 @@ rules:
  - DOMAIN,d349g9zuie06uo.cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,channel5.com,🌍 国外媒体
  - DOMAIN-SUFFIX,my5.tv,🌍 国外媒体
+ - DOMAIN-KEYWORD,nowtv100,🌍 国外媒体
+ - DOMAIN-KEYWORD,rthklive,🌍 国外媒体
  - DOMAIN,mytvsuperlimited.hb.omtrdc.net,🌍 国外媒体
  - DOMAIN,mytvsuperlimited.sc.omtrdc.net,🌍 国外媒体
  - DOMAIN-SUFFIX,mytvsuper.com,🌍 国外媒体
@@ -2319,6 +2253,7 @@ rules:
  - DOMAIN-SUFFIX,youtu.be,🌍 国外媒体
  - DOMAIN-SUFFIX,youtube.com,🌍 国外媒体
  - DOMAIN-SUFFIX,ytimg.com,🌍 国外媒体
+ - DOMAIN,music.youtube.com,🌍 国外媒体
  - DOMAIN-SUFFIX,1password.com,🚀 节点选择
  - DOMAIN-SUFFIX,adguard.org,🚀 节点选择
  - DOMAIN-SUFFIX,bit.no.com,🚀 节点选择
@@ -2331,6 +2266,7 @@ rules:
  - DOMAIN-SUFFIX,hoyolab.com,🚀 节点选择
  - DOMAIN-SUFFIX,inoreader.com,🚀 节点选择
  - DOMAIN-SUFFIX,ip138.com,🚀 节点选择
+ - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
  - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
  - DOMAIN-SUFFIX,notion.so,🚀 节点选择
  - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
@@ -2339,8 +2275,6 @@ rules:
  - DOMAIN-SUFFIX,tumbex.com,🚀 节点选择
  - DOMAIN-SUFFIX,twdvd.com,🚀 节点选择
  - DOMAIN-SUFFIX,unsplash.com,🚀 节点选择
- - DOMAIN-SUFFIX,xn--i2ru8q2qg.com,🚀 节点选择
- - DOMAIN-SUFFIX,yunpanjingling.com,🚀 节点选择
  - DOMAIN-SUFFIX,eu,🚀 节点选择
  - DOMAIN-SUFFIX,hk,🚀 节点选择
  - DOMAIN-SUFFIX,jp,🚀 节点选择
@@ -2728,6 +2662,7 @@ rules:
  - DOMAIN-SUFFIX,msftconnecttest.com,🎯 全球直连
  - DOMAIN-SUFFIX,msftncsi.com,🎯 全球直连
  - DOMAIN-SUFFIX,qupu123.com,🎯 全球直连
+ - DOMAIN-SUFFIX,pdfwifi.com,🎯 全球直连
  - DOMAIN-SUFFIX,cn,🎯 全球直连
  - DOMAIN-SUFFIX,中国,🎯 全球直连
  - DOMAIN-SUFFIX,公司,🎯 全球直连
@@ -2819,7 +2754,6 @@ rules:
  - DOMAIN-SUFFIX,biliapi.com,🎯 全球直连
  - DOMAIN-SUFFIX,biliapi.net,🎯 全球直连
  - DOMAIN-SUFFIX,bilibili.com,🎯 全球直连
- - DOMAIN-SUFFIX,bilibili.tv,🎯 全球直连
  - DOMAIN-SUFFIX,biligame.com,🎯 全球直连
  - DOMAIN-SUFFIX,biligame.net,🎯 全球直连
  - DOMAIN-SUFFIX,bilivideo.com,🎯 全球直连
@@ -3073,7 +3007,6 @@ rules:
  - DOMAIN-SUFFIX,baomitu.com,🎯 全球直连
  - DOMAIN-SUFFIX,bootcss.com,🎯 全球直连
  - DOMAIN-SUFFIX,jiasule.com,🎯 全球直连
- - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
  - DOMAIN-SUFFIX,staticfile.org,🎯 全球直连
  - DOMAIN-SUFFIX,upaiyun.com,🎯 全球直连
  - DOMAIN-SUFFIX,10010.com,🎯 全球直连
@@ -3195,7 +3128,6 @@ rules:
  - DOMAIN-SUFFIX,lanzoux.com,🎯 全球直连
  - DOMAIN-SUFFIX,lemicp.com,🎯 全球直连
  - DOMAIN-SUFFIX,letitfly.me,🎯 全球直连
- - DOMAIN-SUFFIX,linkedin.com,🎯 全球直连
  - DOMAIN-SUFFIX,lizhi.fm,🎯 全球直连
  - DOMAIN-SUFFIX,lizhi.io,🎯 全球直连
  - DOMAIN-SUFFIX,lizhifm.com,🎯 全球直连
@@ -3542,4 +3474,3 @@ rules:
  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
  - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 漏网之鱼
-x1.00
