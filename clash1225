@@ -5,77 +5,77 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: unliss1225, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 3201347a-dd1c-4838-a0bf-d650a1ad5c65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
-  - {name: sssh1225, server: sg.vmess1.xservs.xyz, port: 443, type: vmess, uuid: d3865daa-e29b-4146-abde-9f410506090f, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess1.xservs.xyz}, udp: true}
   - {name: ssh1229, server: sg.vmess1.xservs.xyz, port: 443, type: vmess, uuid: f8db7b60-7927-47ea-a019-cdb4094b4a30, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess1.xservs.xyz}, udp: true}
   - {name: unlissh1229, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: d14d6438-da7a-41dd-93fc-4b9904f6522c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
+  - {name: ssh1230, server: sg.vmess2.xservs.xyz, port: 443, type: vmess, uuid: 533311e6-7f60-4c5d-a34a-160f9e32ecdc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /sshstores, ws-headers: {Host: sg.vmess2.xservs.xyz}, udp: true}
+  - {name: unlissh1230, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 8f1b003b-6743-43bc-8891-37dd41e6a556, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -98,10 +98,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - unliss1225
-      - sssh1225
       - ssh1229
       - unlissh1229
+      - ssh1230
+      - unlissh1230
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -3474,3 +3474,4 @@ rules:
  - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
  - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 漏网之鱼
+x1.00
