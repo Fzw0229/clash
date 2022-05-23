@@ -3,119 +3,111 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: 127.0.0.1:9090
+external-controller: :9090
 proxies:
-  - {name: unlissh52020202020, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 7a83d017-5869-46e5-b9f4-1f5fe86fb423, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /unlissh, headers: {Host: v2ray-sg01.unlissh.cyou}}}
-  - {name: opentunnel520202020, server: sgv-4.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-kjkls", headers: {Host: sgv-4.openv2ray.com}}}
-  - {name: 520202020202, server: vnv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-ebxs", headers: {Host: vnv-1.openv2ray.com}}}
-  - {name: unlissh523, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: b49c745a-e8e6-4c91-a5c4-ac07fe476ca2, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /unlissh, headers: {Host: v2ray-sg01.unlissh.cyou}}}
-  - {name: 🇺🇲 unlissh523usa, server: v2ray-us01.unlissh.cyou, port: 443, type: vmess, uuid: 9ade68b4-a4fb-43a9-a088-5e36c6f9c1bc, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /unlissh, headers: {Host: v2ray-us01.unlissh.cyou}}}
-  - {name: opentunne523, server: sgv-4.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-ershian", headers: {Host: sgv-4.openv2ray.com}}}
-  - {name: 🇺🇲 opentunnel523aus, server: auv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-iuoo", headers: {Host: auv-1.openv2ray.com}}}
-  - {name: opentunnel523, server: vnv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-fasaaa", headers: {Host: vnv-1.openv2ray.com}}}
-  - {name: opentunnel5233333, server: sgv-6.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-vcnxm", headers: {Host: sgv-6.openv2ray.com}}}
+  - {name: unlissh523, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: b49c745a-e8e6-4c91-a5c4-ac07fe476ca2, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}}
+  - {name: 🇺🇸 unlissh523usa, server: v2ray-us01.unlissh.cyou, port: 443, type: vmess, uuid: 9ade68b4-a4fb-43a9-a088-5e36c6f9c1bc, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-us01.unlissh.cyou}}
+  - {name: opentunne523, server: sgv-4.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-ershian", ws-headers: {Host: sgv-4.openv2ray.com}}
+  - {name: 🇺🇸 opentunnel523aus, server: auv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-iuoo", ws-headers: {Host: auv-1.openv2ray.com}}
+  - {name: opentunnel523, server: vnv-1.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fasaaa", ws-headers: {Host: vnv-1.openv2ray.com}}
+  - {name: opentunnel5233333, server: sgv-6.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-vcnxm", ws-headers: {Host: sgv-6.openv2ray.com}}
+  - {name: unlissh524242424242424, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: 163668cc-7681-46ce-a2ff-ffe3cd7a953a, alterId: 0, cipher: auto, tls: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}}
+  - {name: opentunnel52424242424, server: sgv-4.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-okokdf", ws-headers: {Host: sgv-4.openv2ray.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -138,15 +130,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - unlissh52020202020
-      - opentunnel520202020
-      - 520202020202
       - unlissh523
-      - 🇺🇲 unlissh523usa
+      - 🇺🇸 unlissh523usa
       - opentunne523
-      - 🇺🇲 opentunnel523aus
+      - 🇺🇸 opentunnel523aus
       - opentunnel523
       - opentunnel5233333
+      - unlissh524242424242424
+      - opentunnel52424242424
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
