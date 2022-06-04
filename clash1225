@@ -5,69 +5,69 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 531531531, server: v2ray-sg01.unlissh.cyou, port: 443, type: vmess, uuid: fbad838f-2b17-45c1-af9f-7d4dc9593585, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-sg01.unlissh.cyou}, udp: true}
-  - {name: open531531, server: sgv-4.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fsaaccv", ws-headers: {Host: sgv-4.openv2ray.com}, udp: true}
-  - {name: opentunnel531, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdsafcc", ws-headers: {Host: sgv-5.openv2ray.com}, udp: true}
+  - {name: opentunnel531, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdsafcc", ws-headers: {Host: sgv-5.openv2ray.com}}
+  - {name: 6.4444, server: sgv-4.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-iriio", ws-headers: {Host: sgv-4.openv2ray.com}}
+  - {name: 6.44444444, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-mnnvd", ws-headers: {Host: sgv-5.openv2ray.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,9 +90,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 531531531
-      - open531531
       - opentunnel531
+      - 6.4444
+      - 6.44444444
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
