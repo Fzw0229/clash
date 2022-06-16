@@ -3,13 +3,13 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 6151515151, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-kjfsd", ws-headers: {Host: sgv-5.openv2ray.com}, udp: true}
-  - {name: 615151515, server: v2ray-xsg01.unlissh.cyou, port: 443, type: vmess, uuid: a2bc8233-213d-4475-85a2-4e016cf8ecf8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-xsg01.unlissh.cyou}, udp: true}
-  - {name: 6161161616, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-oufodusi", ws-headers: {Host: sgv-5.openv2ray.com}, udp: true}
-  - {name: 616161616, server: sg.vmess3.xservs.xyz, port: 443, type: vmess, uuid: a19b897b-9c03-4401-801e-c6759fba423d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /vmess, ws-headers: {Host: sg.vmess3.xservs.xyz}, udp: true}
-  - {name: 61666666, server: v2ray-xsg01.unlissh.cyou, port: 443, type: vmess, uuid: 16dbbdbe-0ea0-412a-ba46-7e1786d2b49c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /unlissh, ws-headers: {Host: v2ray-xsg01.unlissh.cyou}, udp: true}
+  - {name: 6151515151, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-kjfsd", headers: {Host: sgv-5.openv2ray.com}}}
+  - {name: 615151515, server: v2ray-xsg01.unlissh.cyou, port: 443, type: vmess, uuid: a2bc8233-213d-4475-85a2-4e016cf8ecf8, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /unlissh, headers: {Host: v2ray-xsg01.unlissh.cyou}}}
+  - {name: 6161161616, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-oufodusi", headers: {Host: sgv-5.openv2ray.com}}}
+  - {name: 616161616, server: sg.vmess3.xservs.xyz, port: 443, type: vmess, uuid: a19b897b-9c03-4401-801e-c6759fba423d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /vmess, headers: {Host: sg.vmess3.xservs.xyz}}}
+  - {name: 61666666, server: v2ray-xsg01.unlissh.cyou, port: 443, type: vmess, uuid: 16dbbdbe-0ea0-412a-ba46-7e1786d2b49c, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /unlissh, headers: {Host: v2ray-xsg01.unlissh.cyou}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
