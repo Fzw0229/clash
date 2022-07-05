@@ -5,60 +5,69 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 620, server: v2ray-xsg01.unlissh.cyou, port: 443, type: vmess, uuid: b84dfd25-d58d-47c1-a0ce-3cf3de3ff210, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /unlissh, headers: {Host: v2ray-xsg01.unlissh.cyou}}, udp: true}
-  - {name: 62020, server: sgv-5.openv2ray.com, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: "/opentunnel?user=opentunnel.net-fjkf", headers: {Host: sgv-5.openv2ray.com}}, udp: true}
+  - {name: opentunnel.net-fdsfs, server: t.vbfdg.cn, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdsfs", ws-headers: {Host: sgv-5.openv2ray.com}, udp: true}
+  - {name: v2ray3.udpgw.com, server: v2ray3.udpgw.com, port: 443, type: vmess, uuid: ec142bbb-f9a6-4d09-aadd-8f5c92b93520, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /howdy, ws-headers: {Host: v2ray3.udpgw.com}, udp: true}
+  - {name: opentunnel.net-fdsfds, server: u.afdfd.cn, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdsfds", ws-headers: {Host: sgv-4.openv2ray.com}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
+    tolerance: 50
     proxies:
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -81,8 +90,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 620
-      - 62020
+      - opentunnel.net-fdsfs
+      - v2ray3.udpgw.com
+      - opentunnel.net-fdsfds
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -113,24 +123,6 @@ rules:
  - DOMAIN-SUFFIX,routerlogin.com,🎯 全球直连
  - DOMAIN-SUFFIX,tendawifi.com,🎯 全球直连
  - DOMAIN-SUFFIX,zte.home,🎯 全球直连
- - DOMAIN-SUFFIX,ol.epicgames.com,🎯 全球直连
- - DOMAIN-SUFFIX,dizhensubao.getui.com,🎯 全球直连
- - DOMAIN,dl.google.com,🎯 全球直连
- - DOMAIN-SUFFIX,googletraveladservices.com,🎯 全球直连
- - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net,🎯 全球直连
- - DOMAIN,origin-a.akamaihd.net,🎯 全球直连
- - DOMAIN,xivanalysis.com,🎯 全球直连
- - DOMAIN,picanalysis.vivo.com.cn,🎯 全球直连
- - DOMAIN,fairplay.l.qq.com,🎯 全球直连
- - DOMAIN,livew.l.qq.com,🎯 全球直连
- - DOMAIN,vd.l.qq.com,🎯 全球直连
- - DOMAIN,analytics.strava.com,🎯 全球直连
- - DOMAIN,errlog.umeng.com,🎯 全球直连
- - DOMAIN,msg.umeng.com,🎯 全球直连
- - DOMAIN,msg.umengcloud.com,🎯 全球直连
- - DOMAIN,tracking.miui.com,🎯 全球直连
- - DOMAIN,app.adjust.com,🎯 全球直连
- - DOMAIN,bdtj.tagtic.cn,🎯 全球直连
  - DOMAIN-KEYWORD,admarvel,🛑 全球拦截
  - DOMAIN-KEYWORD,admaster,🛑 全球拦截
  - DOMAIN-KEYWORD,adsage,🛑 全球拦截
