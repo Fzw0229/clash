@@ -5,69 +5,333 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: opentunnel.net-fdsfs, server: t.vbfdg.cn, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdsfs", ws-headers: {Host: sgv-5.openv2ray.com}, udp: true}
-  - {name: v2ray3.udpgw.com, server: v2ray3.udpgw.com, port: 443, type: vmess, uuid: ec142bbb-f9a6-4d09-aadd-8f5c92b93520, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /howdy, ws-headers: {Host: v2ray3.udpgw.com}, udp: true}
-  - {name: opentunnel.net-fdsfds, server: u.afdfd.cn, port: 443, type: vmess, uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5, alterId: 16, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: "/opentunnel?user=opentunnel.net-fdsfds", ws-headers: {Host: sgv-4.openv2ray.com}, udp: true}
+  - {name: GetAFreeNode-Frankfurt, server: 79.137.207.88, port: 38752, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: GetAFreeNode-LosAngeles, server: 88.210.37.18, port: 38752, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: HK_339, server: 210.0.158.220, port: 28443, type: trojan, password: 96673fe8-2a45-4cca-bb6b-108b88aa4a4e, skip-cert-verify: true, udp: true}
+  - {name: Linode 😁, server: sg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202212000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: bulianglin.com}, udp: true}
+  - {name: 套餐到期：2023-01-16, server: hk1.sanfen001.pics, port: 443, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇦🇹 GetAFreeNode-Vienna, server: 94.177.8.87, port: 38752, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IEPL内网专线01, server: fn600mlines021.svcline.com, port: 995, type: ss, cipher: aes-256-gcm, password: 507364fb791e, udp: true}
+  - {name: 🇭🇰 香港IPLC1, server: 117.164.185.222, port: 16112, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC10, server: 117.164.185.221, port: 16111, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC11, server: 117.164.185.222, port: 16113, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC13, server: 202.110.80.144, port: 16104, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC2, server: 117.164.185.221, port: 16107, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC3, server: 117.164.185.221, port: 16112, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC4, server: 117.164.185.221, port: 16113, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC5, server: 117.164.185.222, port: 16115, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC6, server: 117.164.185.221, port: 16116, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC7, server: 117.164.185.222, port: 16110, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC8, server: 117.164.185.222, port: 16116, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港IPLC9, server: 117.164.185.221, port: 16108, type: vmess, uuid: 1163b4ed-dc46-31d4-8e90-f53f3ca0eaf8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 香港跨境金融专线01, server: exkkdx600mtwlines008.fnline.me, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: c9022610bd94, udp: true}
+  - {name: 🇭🇰 香港跨境金融专线02, server: fnhk1000new009.svcline.com, port: 995, type: ss, cipher: aes-256-gcm, password: 47b484a2f3eb, udp: true}
+  - {name: 🇭🇰 香港跨境金融专线03, server: fn600mlines024.svcline.com, port: 995, type: ss, cipher: aes-256-gcm, password: a801632d2e2e, udp: true}
+  - {name: 🇭🇰 香港高级接入点-02, server: hk12.sanfen001.pics, port: 2001, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇭🇰 香港高速接入点-01, server: hk1.sanfen001.pics, port: 443, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇭🇰 香港高速接入点-03, server: hk3.sanfen001.pics, port: 443, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇭🇰 香港高速接入点-04, server: hk4.sanfen001.pics, port: 2003, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇯🇵 日本高速接入点-02, server: jp2.sanfen001.pics, port: 2001, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇷🇺 GetAFreeNode-Moscow, server: 79.137.207.202, port: 38752, type: vmess, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 新加坡高速接入点-02, server: sg2.sanfen001.pics, port: 2004, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇸🇬 新加坡高速接入点-03, server: sg3.sanfen001.pics, port: 2004, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇸🇬 新加坡高速接入点-04, server: sg4.sanfen001.pics, port: 2004, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
+  - {name: 🇺🇸 US-IEPL-001, server: 14.29.160.27, port: 20331, type: ss, cipher: chacha20-ietf-poly1305, password: fa337b21-b80c-4add-8235-a9d0996d371d, udp: true}
+  - {name: 🇺🇸 US-IEPL-002, server: 14.29.160.27, port: 20320, type: ss, cipher: chacha20-ietf-poly1305, password: fa337b21-b80c-4add-8235-a9d0996d371d, udp: true}
+  - {name: 🇺🇸 US-IEPL-003, server: 14.29.160.27, port: 20310, type: ss, cipher: chacha20-ietf-poly1305, password: fa337b21-b80c-4add-8235-a9d0996d371d, udp: true}
+  - {name: 🇺🇸 美国纽约私人订制专线, server: fnhk1000snews008.svcline.com, port: 995, type: ss, cipher: aes-256-gcm, password: 3c88ec132b66, udp: true}
+  - {name: 🏳️‍🌈 剩余流量：4916.47 GB, server: hk1.sanfen001.pics, port: 443, type: vmess, uuid: 34f3a23d-bb24-4e68-8e51-60c49b503bdf, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: "%7B%22Host%22:%22www.microsoft.com%22%7D"}}, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -90,13 +354,47 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - opentunnel.net-fdsfs
-      - v2ray3.udpgw.com
-      - opentunnel.net-fdsfds
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-LosAngeles
+      - HK_339
+      - Linode 😁
+      - 套餐到期：2023-01-16
+      - 🇦🇹 GetAFreeNode-Vienna
+      - 🇭🇰 香港IEPL内网专线01
+      - 🇭🇰 香港IPLC1
+      - 🇭🇰 香港IPLC10
+      - 🇭🇰 香港IPLC11
+      - 🇭🇰 香港IPLC13
+      - 🇭🇰 香港IPLC2
+      - 🇭🇰 香港IPLC3
+      - 🇭🇰 香港IPLC4
+      - 🇭🇰 香港IPLC5
+      - 🇭🇰 香港IPLC6
+      - 🇭🇰 香港IPLC7
+      - 🇭🇰 香港IPLC8
+      - 🇭🇰 香港IPLC9
+      - 🇭🇰 香港跨境金融专线01
+      - 🇭🇰 香港跨境金融专线02
+      - 🇭🇰 香港跨境金融专线03
+      - 🇭🇰 香港高级接入点-02
+      - 🇭🇰 香港高速接入点-01
+      - 🇭🇰 香港高速接入点-03
+      - 🇭🇰 香港高速接入点-04
+      - 🇯🇵 日本高速接入点-02
+      - 🇷🇺 GetAFreeNode-Moscow
+      - 🇸🇬 新加坡高速接入点-02
+      - 🇸🇬 新加坡高速接入点-03
+      - 🇸🇬 新加坡高速接入点-04
+      - 🇺🇸 US-IEPL-001
+      - 🇺🇸 US-IEPL-002
+      - 🇺🇸 US-IEPL-003
+      - 🇺🇸 美国纽约私人订制专线
+      - 🏳️‍🌈 剩余流量：4916.47 GB
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
+ - DOMAIN-SUFFIX,lan,🎯 全球直连
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - DOMAIN-SUFFIX,localhost,🎯 全球直连
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
@@ -105,6 +403,7 @@ rules:
  - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
  - IP-CIDR,198.18.0.0/16,🎯 全球直连,no-resolve
+ - IP-CIDR,224.0.0.0/4,🎯 全球直连,no-resolve
  - IP-CIDR6,::1/128,🎯 全球直连,no-resolve
  - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
  - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
@@ -123,6 +422,27 @@ rules:
  - DOMAIN-SUFFIX,routerlogin.com,🎯 全球直连
  - DOMAIN-SUFFIX,tendawifi.com,🎯 全球直连
  - DOMAIN-SUFFIX,zte.home,🎯 全球直连
+ - DOMAIN-SUFFIX,tplogin.cn,🎯 全球直连
+ - DOMAIN-SUFFIX,ol.epicgames.com,🎯 全球直连
+ - DOMAIN-SUFFIX,dizhensubao.getui.com,🎯 全球直连
+ - DOMAIN,dl.google.com,🎯 全球直连
+ - DOMAIN-SUFFIX,googletraveladservices.com,🎯 全球直连
+ - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net,🎯 全球直连
+ - DOMAIN,origin-a.akamaihd.net,🎯 全球直连
+ - DOMAIN,xivanalysis.com,🎯 全球直连
+ - DOMAIN,picanalysis.vivo.com.cn,🎯 全球直连
+ - DOMAIN,picanalysis-auth.vivo.com.cn,🎯 全球直连
+ - DOMAIN,fairplay.l.qq.com,🎯 全球直连
+ - DOMAIN,livew.l.qq.com,🎯 全球直连
+ - DOMAIN,vd.l.qq.com,🎯 全球直连
+ - DOMAIN,analytics.strava.com,🎯 全球直连
+ - DOMAIN,errlog.umeng.com,🎯 全球直连
+ - DOMAIN,msg.umeng.com,🎯 全球直连
+ - DOMAIN,msg.umengcloud.com,🎯 全球直连
+ - DOMAIN,tracking.miui.com,🎯 全球直连
+ - DOMAIN,app.adjust.com,🎯 全球直连
+ - DOMAIN,bdtj.tagtic.cn,🎯 全球直连
+ - DOMAIN,rewards.hypixel.net,🎯 全球直连
  - DOMAIN-KEYWORD,admarvel,🛑 全球拦截
  - DOMAIN-KEYWORD,admaster,🛑 全球拦截
  - DOMAIN-KEYWORD,adsage,🛑 全球拦截
@@ -309,7 +629,6 @@ rules:
  - DOMAIN-SUFFIX,edigitalsurvey.com,🛑 全球拦截
  - DOMAIN-SUFFIX,eduancm.com,🛑 全球拦截
  - DOMAIN-SUFFIX,emarbox.com,🛑 全球拦截
- - DOMAIN-SUFFIX,epsilon.com,🛑 全球拦截
  - DOMAIN-SUFFIX,exosrv.com,🛑 全球拦截
  - DOMAIN-SUFFIX,fancyapi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,feitian001.com,🛑 全球拦截
@@ -385,7 +704,6 @@ rules:
  - DOMAIN-SUFFIX,mediaplex.com,🛑 全球拦截
  - DOMAIN-SUFFIX,mediav.com,🛑 全球拦截
  - DOMAIN-SUFFIX,megajoy.com,🛑 全球拦截
- - DOMAIN-SUFFIX,meiqia.com,🛑 全球拦截
  - DOMAIN-SUFFIX,mgogo.com,🛑 全球拦截
  - DOMAIN-SUFFIX,miaozhen.com,🛑 全球拦截
  - DOMAIN-SUFFIX,microad-cn.com,🛑 全球拦截
@@ -598,7 +916,6 @@ rules:
  - DOMAIN-SUFFIX,criteo.com,🛑 全球拦截
  - DOMAIN-SUFFIX,criteo.net,🛑 全球拦截
  - DOMAIN-SUFFIX,csbew.com,🛑 全球拦截
- - DOMAIN-SUFFIX,demdex.net,🛑 全球拦截
  - DOMAIN-SUFFIX,directrev.com,🛑 全球拦截
  - DOMAIN-SUFFIX,dumedia.ru,🛑 全球拦截
  - DOMAIN-SUFFIX,effectivemeasure.com,🛑 全球拦截
@@ -1234,7 +1551,6 @@ rules:
  - DOMAIN-SUFFIX,jellyfish.pandora.xiaomi.com,🍃 应用净化
  - DOMAIN-SUFFIX,migc.g.mi.com,🍃 应用净化
  - DOMAIN-SUFFIX,migcreport.g.mi.com,🍃 应用净化
- - DOMAIN-SUFFIX,mis.g.mi.com,🍃 应用净化
  - DOMAIN-SUFFIX,notice.game.xiaomi.com,🍃 应用净化
  - DOMAIN-SUFFIX,ppurifier.game.xiaomi.com,🍃 应用净化
  - DOMAIN-SUFFIX,r.browser.miui.com,🍃 应用净化
@@ -1915,6 +2231,7 @@ rules:
  - DOMAIN-SUFFIX,aaplimg.com,🍎 苹果服务
  - DOMAIN-SUFFIX,akadns.net,🍎 苹果服务
  - DOMAIN-SUFFIX,apple-cloudkit.com,🍎 苹果服务
+ - DOMAIN-SUFFIX,apple-mapkit.com,🍎 苹果服务
  - DOMAIN-SUFFIX,apple.co,🍎 苹果服务
  - DOMAIN-SUFFIX,apple.com,🍎 苹果服务
  - DOMAIN-SUFFIX,apple.com.cn,🍎 苹果服务
@@ -1953,10 +2270,13 @@ rules:
  - DOMAIN-SUFFIX,edgedatg.com,🌍 国外媒体
  - DOMAIN-SUFFIX,go.com,🌍 国外媒体
  - DOMAIN-KEYWORD,abematv.akamaized.net,🌍 国外媒体
+ - DOMAIN,api-abematv.bucketeer.jp,🌍 国外媒体
+ - DOMAIN-SUFFIX,abema-tv.com,🌍 国外媒体
  - DOMAIN-SUFFIX,abema.io,🌍 国外媒体
  - DOMAIN-SUFFIX,abema.tv,🌍 国外媒体
  - DOMAIN-SUFFIX,ameba.jp,🌍 国外媒体
  - DOMAIN-SUFFIX,hayabusa.io,🌍 国外媒体
+ - DOMAIN-SUFFIX,hayabusa.media,🌍 国外媒体
  - DOMAIN-SUFFIX,c4assets.com,🌍 国外媒体
  - DOMAIN-SUFFIX,channel4.com,🌍 国外媒体
  - DOMAIN-KEYWORD,avoddashs,🌍 国外媒体
@@ -1974,6 +2294,7 @@ rules:
  - DOMAIN-SUFFIX,aiv-cdn.net,🌍 国外媒体
  - DOMAIN-SUFFIX,aiv-delivery.net,🌍 国外媒体
  - DOMAIN-SUFFIX,amazon.jobs,🌍 国外媒体
+ - DOMAIN-SUFFIX,amazonuniversity.jobs,🌍 国外媒体
  - DOMAIN-SUFFIX,amazonvideo.com,🌍 国外媒体
  - DOMAIN-SUFFIX,media-amazon.com,🌍 国外媒体
  - DOMAIN-SUFFIX,pv-cdn.net,🌍 国外媒体
@@ -2203,18 +2524,18 @@ rules:
  - DOMAIN-SUFFIX,twitch-ext.rootonline.de,🌍 国外媒体
  - DOMAIN-SUFFIX,twitch.tv,🌍 国外媒体
  - DOMAIN-SUFFIX,twitchcdn.net,🌍 国外媒体
+ - PROCESS-NAME,com.viu.pad,🌍 国外媒体
+ - PROCESS-NAME,com.viu.phone,🌍 国外媒体
+ - PROCESS-NAME,com.vuclip.viu,🌍 国外媒体
  - DOMAIN,api.viu.now.com,🌍 国外媒体
  - DOMAIN,d1k2us671qcoau.cloudfront.net,🌍 国外媒体
  - DOMAIN,d2anahhhmp1ffz.cloudfront.net,🌍 国外媒体
  - DOMAIN,dfp6rglgjqszk.cloudfront.net,🌍 国外媒体
- - DOMAIN-SUFFIX,bootstrapcdn.com,🌍 国外媒体
- - DOMAIN-SUFFIX,cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com,🌍 国外媒体
- - DOMAIN-SUFFIX,firebaseio.com,🌍 国外媒体
- - DOMAIN-SUFFIX,jwpcdn.com,🌍 国外媒体
- - DOMAIN-SUFFIX,jwplayer.com,🌍 国外媒体
+ - DOMAIN-SUFFIX,d1k2us671qcoau.cloudfront.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,d2anahhhmp1ffz.cloudfront.net,🌍 国外媒体
+ - DOMAIN-SUFFIX,dfp6rglgjqszk.cloudfront.net,🌍 国外媒体
  - DOMAIN-SUFFIX,mobileanalytics.us-east-1.amazonaws.com,🌍 国外媒体
- - DOMAIN-SUFFIX,nowe.com,🌍 国外媒体
  - DOMAIN-SUFFIX,viu.com,🌍 国外媒体
  - DOMAIN-SUFFIX,viu.now.com,🌍 国外媒体
  - DOMAIN-SUFFIX,viu.tv,🌍 国外媒体
@@ -2315,7 +2636,6 @@ rules:
  - DOMAIN-SUFFIX,cloudfront.net,🚀 节点选择
  - DOMAIN-SUFFIX,comodoca.com,🚀 节点选择
  - DOMAIN-SUFFIX,daum.net,🚀 节点选择
- - DOMAIN-SUFFIX,demdex.net,🚀 节点选择
  - DOMAIN-SUFFIX,deskconnect.com,🚀 节点选择
  - DOMAIN-SUFFIX,disqus.com,🚀 节点选择
  - DOMAIN-SUFFIX,disquscdn.com,🚀 节点选择
@@ -2580,6 +2900,7 @@ rules:
  - DOMAIN-SUFFIX,steamcommunity.com,🚀 节点选择
  - DOMAIN-SUFFIX,steamgames.com,🚀 节点选择
  - DOMAIN-SUFFIX,steampowered.com,🚀 节点选择
+ - DOMAIN-SUFFIX,steamserver.net,🚀 节点选择
  - DOMAIN-SUFFIX,steamstatic.com,🚀 节点选择
  - DOMAIN-SUFFIX,steamstat.us,🚀 节点选择
  - DOMAIN,steambroadcast.akamaized.net,🚀 节点选择
@@ -2644,6 +2965,8 @@ rules:
  - DOMAIN-SUFFIX,icntv.xyz,🚀 节点选择
  - DOMAIN-SUFFIX,flzbcdn.xyz,🚀 节点选择
  - DOMAIN-SUFFIX,ocnttv.com,🚀 节点选择
+ - DOMAIN-SUFFIX,vikacg.com,🚀 节点选择
+ - DOMAIN-SUFFIX,picjs.xyz,🚀 节点选择
  - DOMAIN-SUFFIX,13th.tech,🎯 全球直连
  - DOMAIN-SUFFIX,423down.com,🎯 全球直连
  - DOMAIN-SUFFIX,bokecc.com,🎯 全球直连
@@ -2674,7 +2997,6 @@ rules:
  - DOMAIN-KEYWORD,ccgslb,🎯 全球直连
  - DOMAIN-KEYWORD,chinacache,🎯 全球直连
  - DOMAIN-KEYWORD,duobao,🎯 全球直连
- - DOMAIN-KEYWORD,duolingo,🎯 全球直连
  - DOMAIN-KEYWORD,jdpay,🎯 全球直连
  - DOMAIN-KEYWORD,moke,🎯 全球直连
  - DOMAIN-KEYWORD,qhimg,🎯 全球直连
@@ -2815,6 +3137,7 @@ rules:
  - DOMAIN-SUFFIX,douyuscdn.com,🎯 全球直连
  - DOMAIN-SUFFIX,douyutv.com,🎯 全球直连
  - DOMAIN-SUFFIX,epicgames.com,🎯 全球直连
+ - DOMAIN-SUFFIX,epicgames.dev,🎯 全球直连
  - DOMAIN-SUFFIX,helpshift.com,🎯 全球直连
  - DOMAIN-SUFFIX,paragon.com,🎯 全球直连
  - DOMAIN-SUFFIX,unrealengine.com,🎯 全球直连
@@ -2888,10 +3211,16 @@ rules:
  - DOMAIN-SUFFIX,leju.com,🎯 全球直连
  - DOMAIN-SUFFIX,miaopai.com,🎯 全球直连
  - DOMAIN-SUFFIX,sina.com,🎯 全球直连
+ - DOMAIN-SUFFIX,sina.com.cn,🎯 全球直连
+ - DOMAIN-SUFFIX,sina.cn,🎯 全球直连
  - DOMAIN-SUFFIX,sinaapp.com,🎯 全球直连
+ - DOMAIN-SUFFIX,sinaapp.cn,🎯 全球直连
  - DOMAIN-SUFFIX,sinaimg.com,🎯 全球直连
+ - DOMAIN-SUFFIX,sinaimg.cn,🎯 全球直连
  - DOMAIN-SUFFIX,weibo.com,🎯 全球直连
+ - DOMAIN-SUFFIX,weibo.cn,🎯 全球直连
  - DOMAIN-SUFFIX,weibocdn.com,🎯 全球直连
+ - DOMAIN-SUFFIX,weibocdn.cn,🎯 全球直连
  - DOMAIN-SUFFIX,xiaoka.tv,🎯 全球直连
  - DOMAIN-SUFFIX,go2map.com,🎯 全球直连
  - DOMAIN-SUFFIX,sogo.com,🎯 全球直连
